@@ -6,15 +6,10 @@ namespace SandboxNET
     {
         static void Main(string[] args)
         {
-            // overflowing
-            checked
-            {
-                byte number = 250;
-                number += 3;
+            int i = 260;
+            byte b = (byte)i;
 
-                Console.WriteLine(number);
-            }
-
+            Console.WriteLine(b);
 
         }
     }
