@@ -6,6 +6,7 @@ namespace SandboxNET
     {
         static void Main(string[] args)
         {
+            // overflowing
             checked
             {
                 byte number = 250;
