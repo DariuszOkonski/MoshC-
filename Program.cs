@@ -6,10 +6,18 @@ namespace SandboxNET
     {
         static void Main(string[] args)
         {
-            int i = 260;
-            byte b = (byte)i;
+            try
+            {
+                var number = "1234";
+                byte b = Convert.ToByte(number);
+                Console.WriteLine(b);
 
-            Console.WriteLine(b);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong");
+            }
+
 
         }
     }
