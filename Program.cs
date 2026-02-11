@@ -1,26 +1,22 @@
-﻿using System;
+﻿using SandboxNET.Math;
+using System;
 
 namespace SandboxNET
 {
-    public class Person
-    {
-        public string FirstName;
-        public string LastName;
-
-        public void Introduce()
-        {
-            Console.WriteLine("My name is " + FirstName + " " + LastName);
-        }
-    }
     internal class Program
     {
         static void Main(string[] args)
         {
             Person john = new Person();
             john.FirstName = "John";
-            john.LastName = "Dear";
+            john.LastName = "Smith";
 
             john.Introduce();
+
+            Calculator calculator = new Calculator();
+
+            var result = calculator.Add(1, 2);
+            Console.WriteLine(result);
         }
     }
 }
