@@ -2,28 +2,32 @@
 
 namespace SandboxNET
 {
+    public enum ShippingMethod
+    {
+        RegularAirMail = 1,
+        RegisteredAirMail,
+        Express
+    }
+
     internal class Program
     {
         static void Main(string[] args)
         {
-            var numbers = new int[3];
-            numbers[0] = 1;
+            var a = 10;
+            var b = a;
 
-            Console.WriteLine(numbers[0]);
-            Console.WriteLine(numbers[1]);
-            Console.WriteLine(numbers[2]);
+            b++;
+            Console.WriteLine(string.Format("a: {0}, b: {1}", a, b));
+            Console.WriteLine("======");
 
-            var flags = new bool[3];
-            flags[0] = true;
+            var array1 = new int[3] { 1, 2, 3 };
+            var array2 = array1;
 
-            Console.WriteLine(flags[0]);
-            Console.WriteLine(flags[1]);
-            Console.WriteLine(flags[2]);
+            array2[0] = 0;
 
-            var names = new string[3] { "Jack", "John", "Mary" };
-            Console.WriteLine(names[0]);
-            Console.WriteLine(names[1]);
-            Console.WriteLine(names[2]);
+            Console.WriteLine(array1 == array2);
+            Console.WriteLine(string.Format("array1[0]: {0}, array2[0]: {1}", array1[0], array2[0]));
         }
+
     }
 }
