@@ -13,32 +13,20 @@ namespace SandboxNET
     {
         static void Main(string[] args)
         {
-            var number = 1;
-            Increment(number);
+            int hour = 10;
 
-            Console.WriteLine(number);
-            Console.WriteLine("===============");
-
-            var person = new Person()
+            if (hour > 0 && hour < 12)
             {
-                Age = 20
-            };
+                Console.WriteLine("It's morning");
+            }
+            else
+            {
+                Console.WriteLine("It's evening");
+            }
 
-            MakeOld(person);
 
-            Console.WriteLine("Perons.Age: " + person.Age);
+
+
         }
-
-        public static void Increment(int number)
-        {
-            number += 10;
-            Console.WriteLine("Inside: " + number);
-        }
-
-        public static void MakeOld(Person person)
-        {
-            person.Age += 10;
-        }
-
     }
 }
