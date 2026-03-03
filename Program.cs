@@ -7,13 +7,11 @@ namespace SandboxNET
     {
         static void Main(string[] args)
         {
-            int i = 0;
+            var numbers = new int[] { 1, 2, 3, 4 };
 
-            while (i < 10)
+            foreach (var number in numbers)
             {
-                Console.WriteLine(i);
-
-                i++;
+                Console.WriteLine(number);
             }
         }
     }
