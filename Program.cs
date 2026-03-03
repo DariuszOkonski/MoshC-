@@ -7,19 +7,19 @@ namespace SandboxNET
     {
         static void Main(string[] args)
         {
-            while (true)
+            var random = new Random();
+            char[] buffer = new char[10];
+
+
+            for (int i = 0; i < 10; i++)
             {
-                Console.Write("Write your name: ");
-                var input = Console.ReadLine();
-
-                if (!String.IsNullOrWhiteSpace(input))
-                {
-                    Console.WriteLine("@Echo: " + input);
-                    continue;
-                }
-                break;
-
+                buffer[i] = (char)('a' + random.Next(0, 26));
             }
+
+            var password = new string(buffer);
+
+            Console.WriteLine(password);
+
         }
     }
 }
