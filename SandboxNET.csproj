@@ -45,11 +45,11 @@
   <ItemGroup>
     <Compile Include="Exercises\Exercise_5_1.cs" />
     <Compile Include="Math\Calculator.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="Classes\Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Season.cs" />
-    <Compile Include="ShippingMethod.cs" />
+    <Compile Include="Classes\Season.cs" />
+    <Compile Include="Classes\ShippingMethod.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
