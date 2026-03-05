@@ -7,21 +7,43 @@ namespace SandboxNET
     {
         static void Main(string[] args)
         {
-            //var matrix = new int[3, 5]
-            //{
-            //    {1,2,3,4,5 },
-            //    {6,7,8,9,10 },
-            //    {11,12,13,14,15 }
-            //};
+            var numbers = new int[] { 3, 7, 9, 2, 14, 6 };
 
-            //Console.WriteLine(matrix[0, 2]);
-            var array = new int[3][];
-            array[0] = new int[4];
-            array[1] = new int[5];
-            array[2] = new int[3];
 
-            Console.WriteLine(array[0][1]);
+            Console.WriteLine("Lenght: " + numbers.Length);
 
+            var index = Array.IndexOf(numbers, 9);
+            Console.WriteLine("index: " + index);
+
+            Array.Clear(numbers, 0, 2);
+            foreach (var item in numbers)
+            {
+                Console.WriteLine(item);
+            }
+
+
+            Console.WriteLine("=======");
+
+            int[] another = new int[3];
+            Array.Copy(numbers, another, 3);
+            foreach (var item in another)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("+++++++");
+            Array.Sort(numbers);
+            foreach (var item in numbers)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("----------------");
+            Array.Reverse(numbers);
+            foreach (var item in numbers)
+            {
+                Console.WriteLine(item);
+            }
 
         }
     }
