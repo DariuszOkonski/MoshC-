@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SandboxNET
 {
@@ -7,44 +8,21 @@ namespace SandboxNET
     {
         static void Main(string[] args)
         {
-            var numbers = new int[] { 3, 7, 9, 2, 14, 6 };
+            var numbers = new List<int>() { 1, 2, 3, 4 };
 
+            numbers.Add(1);
+            numbers.AddRange(new int[3] { 5, 6, 7 });
 
-            Console.WriteLine("Lenght: " + numbers.Length);
+            foreach (var item in numbers)
+            {
+                Console.WriteLine(item);
+            }
 
-            var index = Array.IndexOf(numbers, 9);
+            Console.WriteLine("++++++++++++");
+
+            var index = numbers.IndexOf(1);
             Console.WriteLine("index: " + index);
-
-            Array.Clear(numbers, 0, 2);
-            foreach (var item in numbers)
-            {
-                Console.WriteLine(item);
-            }
-
-
-            Console.WriteLine("=======");
-
-            int[] another = new int[3];
-            Array.Copy(numbers, another, 3);
-            foreach (var item in another)
-            {
-                Console.WriteLine(item);
-            }
-
-            Console.WriteLine("+++++++");
-            Array.Sort(numbers);
-            foreach (var item in numbers)
-            {
-                Console.WriteLine(item);
-            }
-
-            Console.WriteLine("----------------");
-            Array.Reverse(numbers);
-            foreach (var item in numbers)
-            {
-                Console.WriteLine(item);
-            }
-
+            Console.WriteLine("last index: " + numbers.LastIndexOf(1));
         }
     }
 }
