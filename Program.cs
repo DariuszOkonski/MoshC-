@@ -1,4 +1,4 @@
-﻿using SandboxNET.Exercises;
+﻿using System;
 
 namespace SandboxNET
 {
@@ -7,21 +7,21 @@ namespace SandboxNET
     {
         static void Main(string[] args)
         {
-            //const int passwordLength = 10;
-            //var random = new Random();
-            //char[] buffer = new char[passwordLength];
-
-
-            //for (int i = 0; i < passwordLength; i++)
+            //var matrix = new int[3, 5]
             //{
-            //    buffer[i] = (char)('a' + random.Next(0, 26));
-            //}
+            //    {1,2,3,4,5 },
+            //    {6,7,8,9,10 },
+            //    {11,12,13,14,15 }
+            //};
 
-            //var password = new string(buffer);
+            //Console.WriteLine(matrix[0, 2]);
+            var array = new int[3][];
+            array[0] = new int[4];
+            array[1] = new int[5];
+            array[2] = new int[3];
 
-            //Console.WriteLine(password);
+            Console.WriteLine(array[0][1]);
 
-            Exercise_5_2.Run();
 
         }
     }
