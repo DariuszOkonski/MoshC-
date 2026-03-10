@@ -1,4 +1,4 @@
-﻿using SandboxNET.Exercises;
+﻿using System;
 
 namespace SandboxNET
 {
@@ -7,23 +7,15 @@ namespace SandboxNET
     {
         static void Main(string[] args)
         {
-            //var numbers = new List<int>() { 1, 2, 3, 4 };
+            DateTime dateTime = new DateTime(2015, 1, 1);
+            var now = DateTime.Now;
+            var today = DateTime.Today;
 
-            //numbers.Add(1);
-            //numbers.AddRange(new int[3] { 5, 6, 7 });
+            now.AddDays(5);
 
-            //foreach (var item in numbers)
-            //{
-            //    Console.WriteLine(item);
-            //}
-
-            //Console.WriteLine("++++++++++++");
-
-            //var index = numbers.IndexOf(1);
-            //Console.WriteLine("index: " + index);
-            //Console.WriteLine("last index: " + numbers.LastIndexOf(1));
-
-            Exercise_6_1.Run();
+            Console.WriteLine(now.Hour);
+            Console.WriteLine(now.Minute);
+            Console.WriteLine(now.Second);
         }
     }
 }
